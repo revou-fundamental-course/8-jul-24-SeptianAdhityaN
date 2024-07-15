@@ -21,12 +21,12 @@
 
     <!-- MAIN START-->
     <main>
-      <!-- MAIN SECTION START -->
+      <!-- LEFT SECTION START -->
       <section class="main-content">
         <!-- MAIN ARTICLE -->
         <article>
           <p>
-            Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal dan juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.
+            Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.
           </p>
         </article>
 
@@ -34,34 +34,34 @@
         <section class="form-section">
           <form action="">
             <h3>Jenis Kelamin</h3>
-            <input type="radio" name="selection-male" id="selection-male"><label for="selection-male">Laki-laki</label>
-            <input type="radio" name="selection-female" id="selection-female"><label for="selection-female">Perempuan</label>
+            <input required type="radio" name="gender" id="selection-male"><label for="selection-male">Laki-laki</label>
+            <input required type="radio" name="gender" id="selection-female"><label for="selection-female">Perempuan</label>
 
             <div>
               <label for="input-weight">Berat Badan (kg)</label>
               <div class="input">
                 <ion-icon name="send"></ion-icon>
-                <input type="number" id="input-weight">
+                <input required type="number" id="input-weight">
               </div>
             </div>
             <div>
               <label for="input-years-old">Usia (th)</label>
               <div class="input">
                 <ion-icon name="send"></ion-icon>
-                <input type="number" id="input-years-old">
+                <input required type="number" id="input-years-old">
               </div>
             </div>
             <div>
               <label for="input-height">Tinggi Badan (cm)</label>
               <div class="input">
                 <ion-icon name="send"></ion-icon>
-                <input type="number" id="input-height">
+                <input required type="number" id="input-height">
               </div>
             </div>
 
             <div>
-              <button type="submit" id="btn-result" class="btn-result">Hitung BMI</button>
-              <button type="submit" id="btn-reset" class="btn-reset">Reset</button>
+              <button type="button" id="btn-result" class="btn-result">Hitung BMI</button>
+              <button type="button" id="btn-reset" class="btn-reset">Reset</button>
             </div>
           </form>
         </section>
@@ -84,22 +84,22 @@
           </article>
         </section>
       </section>
-      <!-- MAIN SECTION END -->
+      <!-- LEFT SECTION END -->
 
-      <!-- RESULT SECTION START -->
+      <!-- RIGHT SECTION START -->
       <section class="main-content" id="result-section">
         <!-- RESULT HEADER -->
         <header>
-          <h2>Result</h2>
+          <h2 class="title-result">Result</h2>
         </header>
 
         <!-- RESULT SECTION -->
         <section class="result-section">
           <!-- Text untuk menerapkan result -->
-          <p id="result">Hasil Result adalah:</p>
+          <p id="result">Hasilnya adalah:</p>
 
           <!-- Text untuk menampilkan result index -->
-          <h2 id="result-index">...</h2>
+          <h2 id="result-index">0.00</h2>
 
           <!-- Text untuk menampilkan result status -->
           <p id="result-status">Status berat badan adalah</p>
@@ -113,7 +113,17 @@
         <!-- RESULT SECTION -->
         <section></section>
       </section>
-      <!-- RESULT SECTION END -->
+      <!-- RIGHT SECTION END -->
+
+      <!-- POP UP -->
+      <div class="popup" id="popup">
+        <div class="popup-content">
+          <img id="img-popup" alt="">
+          <h2 id="head-message"></h2>
+          <p id="message"></p>
+          <button class="popup-btn" id="popup-btn">OK</button>
+        </div>
+      </div>
     </main>
     <!-- MAIN END-->
 
