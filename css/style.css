@@ -172,6 +172,23 @@ input[type=number]:focus {
   margin-bottom: 1rem;
 }
 
+.btn-download {
+  color: #fff;
+  background-color: rgb(231, 139, 0);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  border: none;
+  transition: .5s;
+  visibility: hidden;
+}
+
+.btn-download:hover {
+  background-color: rgb(168, 88, 13);
+}
+
 .result-radius {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -188,6 +205,12 @@ input[type=number]:focus {
   background-color: #f0f0f0;
   padding: 1rem;
   border-radius: 8px;
+  margin-bottom: 2rem;
+  visibility: hidden;
+}
+
+.active {
+  visibility: visible;
 }
 
 .title-penyakit {

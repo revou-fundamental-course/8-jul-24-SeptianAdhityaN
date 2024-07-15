@@ -11,6 +11,7 @@ const disclaimerText = document.querySelector(".disclaimer-text");
 const titlePenyakit = document.querySelector(".title-penyakit");
 const listPenyakit = document.querySelector(".list-penyakit");
 
+
 // Fungsi kalkulasi BMI
 function BMI(weight, height) {
   return (weight / (height * height)).toFixed(2);
@@ -41,7 +42,7 @@ btnResult.addEventListener("click", (event) => {
   // Menentukan status berdasarkan hasil
   if (bmi < 18.5) {
     resultStatus.innerText =
-      'Status berat badan adalah "Kekurangan berat badan"';
+      '"Kekurangan berat badan"';
     resultRadius.innerText = "Hasil BMI di bawah 18.5";
     resultDescription.innerText =
       "Anda berada dalam kategori underweight atau kekurangan berat badan.";
@@ -58,7 +59,7 @@ btnResult.addEventListener("click", (event) => {
                               <li>Infertilitas</li>
                               <li>Sistem kekebalan tubuh yang lemah</li>`;
   } else if (bmi >= 18.5 && bmi <= 24.9) {
-    resultStatus.innerText = 'Status berat badan adalah "Normal (ideal)"';
+    resultStatus.innerText = '"Normal (ideal)"';
     resultRadius.innerText = "Hasil BMI diantara 18.5 dan 24.9";
     resultDescription.innerText =
       "Anda berada dalam kategori normal atau berat badan ideal.";
@@ -76,7 +77,7 @@ btnResult.addEventListener("click", (event) => {
                               <li>Penyakit autoimun</li>`;
   } else if (bmi >= 25 && bmi <= 29.9) {
     resultStatus.innerText =
-      'Status berat badan adalah "Kelebihan berat badan"';
+      '"Kelebihan berat badan"';
     resultRadius.innerText = "Hasil BMI diantara 25 dan 29.9";
     resultDescription.innerText =
       "Anda berada dalam kategori overweight atau berat badan berlebih.";
@@ -93,7 +94,7 @@ btnResult.addEventListener("click", (event) => {
                               <li>Penyakit hati berlemak non-alkohol (NAFLD)</li>
                               <li>Varises</li>`;
   } else {
-    resultStatus.innerText = 'Status berat badan adalah Kegemukan (Obesitas)';
+    resultStatus.innerText = 'Kegemukan (Obesitas)';
     resultRadius.innerText = "Hasil BMI diantara 30 dan 34.9";
     resultDescription.innerText = "Anda berada dalam kategori obesitas.";
     resultSugestion.innerText =
@@ -109,6 +110,11 @@ btnResult.addEventListener("click", (event) => {
                               <li>Penyakit jantung koroner</li>
                               <li>Osteoarthritis</li>`;
   }
+
+  const btnDownload = document.querySelector(".btn-download");
+  btnDownload.classList.add("active");
+  const listPenyakitContainer = document.querySelector(".list-penyakit-container");
+  listPenyakitContainer.classList.add("active");
 });
 
 // Untuk mereset web ke bentuk awal
@@ -123,8 +129,13 @@ btnReset.addEventListener("click", () => {
     radio.checked = false;
   });
 
+  const btnDownload = document.querySelector(".btn-download");
+  btnDownload.classList.remove("active");
+  const listPenyakitContainer = document.querySelector(".list-penyakit-container");
+  listPenyakitContainer.classList.remove("active");
+
   resultIndex.innerText = "0.00";
-  resultStatus.innerText = "Status berat badan adalah";
+  resultStatus.innerText = "";
 
   resultRadius.innerText = "";
   resultDescription.innerText = "";
