@@ -18,7 +18,11 @@ body {
 /* Header */
 .title-header {
   text-align: center;
-  margin: 2rem;
+  margin: .5rem 2rem;
+  font-size: 1.5rem;
+  color: #000;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
 }
 
 /* Main */
@@ -62,15 +66,43 @@ input {
   margin-bottom: 1rem;
 }
 
-input[type="number"] {
+ion-icon {
+  border: 1px solid grey;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  position: relative;
+  top: -4px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type=radio] {
+  margin-top: .7rem;
+  margin-left: 1rem;
+  margin-right: .3rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type=number] {
   width: 100%;
   margin-top: 0.5rem;
-}
-
-input[type="number"]:focus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid grey;
+  border-radius: 3px;
 }
 
+input[type=number]:focus {
+  border: 1px solid black;
+}
 
 .btn-result {
   color: #fff;
@@ -118,4 +150,30 @@ input[type="number"]:focus {
   align-items: center;
   padding: 1rem;
   border: solid;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 95%;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+
+  .main-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 425px) {
+  html {
+    font-size: 75%;
+  }
 }

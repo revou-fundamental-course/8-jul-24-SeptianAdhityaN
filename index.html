@@ -3,14 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <!-- LINK CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <title>Kalkulator BMI</title>
+
+    <!-- IMPORT ICON FROM ION ICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
   </head>
   <body>
     <!-- HEADER START-->
     <header class="title-header">
-      <h1>Kalkulator BMI</h1>
+      <h1>KALKULATOR BMI</h1>
     </header>
     <!-- HEADER END-->
 
@@ -33,13 +38,25 @@
             <input type="radio" name="selection-female" id="selection-female"><label for="selection-female">Perempuan</label>
 
             <div>
-              <label for="input-weight">Berat Badan (kg)</label><input type="number" id="input-weight">
+              <label for="input-weight">Berat Badan (kg)</label>
+              <div class="input">
+                <ion-icon name="send"></ion-icon>
+                <input type="number" id="input-weight">
+              </div>
             </div>
             <div>
-              <label for="input-years-old">Usia (th)</label><input type="number" id="input-years-old">
+              <label for="input-years-old">Usia (th)</label>
+              <div class="input">
+                <ion-icon name="send"></ion-icon>
+                <input type="number" id="input-years-old">
+              </div>
             </div>
             <div>
-              <label for="input-height">Tinggi Badan (cm)</label><input type="number" id="input-height">
+              <label for="input-height">Tinggi Badan (cm)</label>
+              <div class="input">
+                <ion-icon name="send"></ion-icon>
+                <input type="number" id="input-height">
+              </div>
             </div>
 
             <div>
@@ -78,10 +95,13 @@
 
         <!-- RESULT SECTION -->
         <section class="result-section">
-          <p id="result">Hasil Result adalah</p>
+          <!-- Text untuk menerapkan result -->
+          <p id="result">Hasil Result adalah:</p>
 
+          <!-- Text untuk menampilkan result index -->
           <h2 id="result-index">...</h2>
 
+          <!-- Text untuk menampilkan result status -->
           <p id="result-status">Status berat badan adalah</p>
 
           <button class="btn-result">Download Hasil</button>
