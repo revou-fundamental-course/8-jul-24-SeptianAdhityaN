@@ -72,7 +72,7 @@ function openPopup() {
   image.setAttribute("src", "assets/alert.png");
 
   const message = document.getElementById("message");
-  message.innerText = `Tolong masukkan angka yang valid`;
+  message.innerText = `Tolong masukkan angka yang valid.`;
 
   const popupButton = document.getElementById("popup-btn");
   popupButton.addEventListener("click", function () {
