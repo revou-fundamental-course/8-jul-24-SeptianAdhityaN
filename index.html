@@ -1,17 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- LINK CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <title>Kalkulator BMI</title>
-</head>
-<body>
-  <h3>Halo Dek</h3>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Kalkulator BMI</title>
+  </head>
+  <body>
+    <!-- HEADER START-->
+    <header class="title-header">
+      <h1>Kalkulator BMI</h1>
+    </header>
+    <!-- HEADER END-->
 
+    <!-- MAIN START-->
+    <main>
+      <!-- MAIN SECTION START -->
+      <section class="main-content">
+        <!-- MAIN ARTICLE -->
+        <article>
+          <p>
+            Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal dan juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.
+          </p>
+        </article>
 
-<!-- SCRIPTS JAVASCRIPT -->
-<script src="js/script.js"></script>
-</body>
+        <!-- FORM SECTION -->
+        <section class="form-section">
+          <form action="">
+            <h3>Jenis Kelamin</h3>
+            <input type="radio" name="selection-male" id="selection-male"><label for="selection-male">Laki-laki</label>
+            <input type="radio" name="selection-female" id="selection-female"><label for="selection-female">Perempuan</label>
+
+            <div>
+              <label for="input-weight">Berat Badan (kg)</label><input type="number" id="input-weight">
+            </div>
+            <div>
+              <label for="input-years-old">Usia (th)</label><input type="number" id="input-years-old">
+            </div>
+            <div>
+              <label for="input-height">Tinggi Badan (cm)</label><input type="number" id="input-height">
+            </div>
+
+            <div>
+              <button type="submit" id="btn-result" class="btn-result">Hitung BMI</button>
+              <button type="submit" id="btn-reset" class="btn-reset">Reset</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- FORM ARTICLE -->
+        <section class="form-article">
+          <header>
+            <h3>Keunggulan Fitur</h3>
+          </header>
+
+          <article>
+            <ol>
+              <li>Menghitung berat badan</li>
+              <li>Menentukan kategori berat badan ideal atau tidak</li>
+              <li>Mempersiapkan progrma penurunan berat badan</li>
+            </ol>
+
+            <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengaandalkan pembacaan BMI ini) dabn t idak ada tindakan yang harus diambil berdasarkan nilainya selaian berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
+            <p>Kalkulator akan memberi anda gambaran tentang perbandingan berat badan anda dengan nilai umum Indeks Massa Tubuh (BMI) dihitung sebagaai berat badan andaa (dalam kilogram) dibagi dengan kuadrat tinggi badan anda (dalam meter) atau BMI = Kg/M².</p>
+          </article>
+        </section>
+      </section>
+      <!-- MAIN SECTION END -->
+
+      <!-- RESULT SECTION START -->
+      <section class="main-content" id="result-section">
+        <!-- RESULT HEADER -->
+        <header>
+          <h2>Result</h2>
+        </header>
+
+        <!-- RESULT SECTION -->
+        <section class="result-section">
+          <p id="result">Hasil Result adalah</p>
+
+          <h2 id="result-index">...</h2>
+
+          <p id="result-status">Status berat badan adalah</p>
+
+          <button class="btn-result">Download Hasil</button>
+        </section>
+
+        <!-- RESULT ARTICLE -->
+        <article></article>
+
+        <!-- RESULT SECTION -->
+        <section></section>
+      </section>
+      <!-- RESULT SECTION END -->
+    </main>
+    <!-- MAIN END-->
+
+    <!-- FOOTER START-->
+    <footer></footer>
+    <!-- FOOTER END-->
+
+    <!-- SCRIPTS JAVASCRIPT -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
