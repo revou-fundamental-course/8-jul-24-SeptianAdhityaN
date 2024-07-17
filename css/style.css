@@ -65,7 +65,7 @@ input {
   margin-bottom: 1rem;
 }
 
-ion-icon {
+.input ion-icon {
   border: 1px solid grey;
   border-radius: 3px;
   display: flex;
@@ -268,7 +268,7 @@ input[type=number]:focus {
   width: 30%;
   margin-top: 50px;
   border-color: #fff;
-  background-color: cornflowerblue;
+  background-color: orange;
   color: white;
   padding: 10px 0;
   border-radius: 5px;
@@ -280,6 +280,46 @@ input[type=number]:focus {
 }
 
 
+/* FOOTER */
+footer {
+  background-color: orange;
+}
+
+footer p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.footer-container {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 2rem;
+}
+
+.contact {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-media ion-icon {
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
 /* RESPONSIVE DESIGN */
 /* Laptop */
 @media (max-width: 1024px) {
@@ -289,6 +329,13 @@ input[type=number]:focus {
 
   main {
     flex-direction: column;
+  }
+
+  .footer-container{
+    font-size: 1.2rem;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    gap: 1rem;
   }
 }
 
@@ -302,7 +349,7 @@ input[type=number]:focus {
     padding: 2rem;
   }
 
-  ion-icon {
+  .input ion-icon {
     padding: 0.55rem;
   }
 }
@@ -313,7 +360,7 @@ input[type=number]:focus {
     font-size: 75%;
   }
 
-  ion-icon {
+  .input ion-icon {
     padding: 0.65rem;
   }
 }
