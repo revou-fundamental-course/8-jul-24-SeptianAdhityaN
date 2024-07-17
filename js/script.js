@@ -24,11 +24,11 @@ btnResult.addEventListener("click", (event) => {
 
   // Mengambil nilai input
   const weight = parseFloat(document.querySelector("#input-weight").value);
-  const height =
-    parseFloat(document.querySelector("#input-height").value) / 100;
+  const height = parseFloat(document.querySelector("#input-height").value) / 100;
+  const yearsOld = parseFloat(document.querySelector("#input-years-old").value);
 
   // Validasi input dengan benar
-  if (weight === "" || height === "" || isNaN(weight) || isNaN(height)) {
+  if (weight === "" || height === "" || yearsOld === "" || isNaN(weight) || isNaN(height) || isNaN(yearsOld)) {
     openPopup();
     return;
   }
@@ -111,8 +111,11 @@ btnResult.addEventListener("click", (event) => {
                               <li>Osteoarthritis</li>`;
   }
 
+  // Tambahkan kelas active pada tombol download
   const btnDownload = document.querySelector(".btn-download");
   btnDownload.classList.add("active");
+
+  // Tambahkan kelas active pada list penyakit
   const listPenyakitContainer = document.querySelector(".list-penyakit-container");
   listPenyakitContainer.classList.add("active");
 });
@@ -129,11 +132,15 @@ btnReset.addEventListener("click", () => {
     radio.checked = false;
   });
 
+  // Remove kelas active pada tombol download
   const btnDownload = document.querySelector(".btn-download");
   btnDownload.classList.remove("active");
+
+  // Remove kelas active pada list penyakit
   const listPenyakitContainer = document.querySelector(".list-penyakit-container");
   listPenyakitContainer.classList.remove("active");
 
+  // Reset result
   resultIndex.innerText = "0.00";
   resultStatus.innerText = "";
 
@@ -147,19 +154,25 @@ btnReset.addEventListener("click", () => {
   listPenyakit.innerHTML = "";
 });
 
+// Fungsi popup
 function openPopup() {
+  // menambahkan kelas open-popup pada popup
   const popup = document.getElementById("popup");
   popup.classList.add("open-popup");
 
+  // menambahkan text pada popup
   const headMessage = document.getElementById("head-message");
   headMessage.innerText = "Peringatan !";
 
+  // menambahkan image pada popup
   const image = document.getElementById("img-popup");
   image.setAttribute("src", "assets/alert.png");
 
+  // menambahkan text pada popup
   const message = document.getElementById("message");
   message.innerText = `Tolong masukkan angka yang valid.`;
 
+  // menambahkan tombol jika di klik maka akan menutup popup
   const popupButton = document.getElementById("popup-btn");
   popupButton.addEventListener("click", function () {
     popup.classList.remove("open-popup");

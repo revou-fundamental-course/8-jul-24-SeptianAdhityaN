@@ -44,6 +44,7 @@ main {
   align-items: center;
 }
 
+/* Form */
 form {
   border-radius: 8px;
   width: 100%;
@@ -104,6 +105,7 @@ input[type=number]:focus {
   border: 1px solid black;
 }
 
+/* Button */
 .btn-result {
   color: #fff;
   background-color: rgb(231, 139, 0);
@@ -209,6 +211,7 @@ input[type=number]:focus {
   visibility: hidden;
 }
 
+/* jika active */
 .active {
   visibility: visible;
 }
@@ -290,6 +293,7 @@ footer p {
   color: #fff;
 }
 
+/* container untuk footer */
 .footer-container {
   display: flex;
   text-align: center;
@@ -301,11 +305,13 @@ footer p {
   margin-right: 2rem;
 }
 
+/* untuk contact */
 .contact {
   display: flex;
   gap: 1rem;
 }
 
+/* untuk social media */
 .social-media {
   display: flex;
   align-items: center;
